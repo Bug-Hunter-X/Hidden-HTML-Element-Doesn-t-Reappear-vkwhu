@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      document.getElementById("myDiv").innerHTML = ""; 
+      document.getElementById("myDiv").style.display = "none";
+      //After some time or event, reset the display property
+      setTimeout(function(){
+document.getElementById("myDiv").style.display = "block"; //or inline, etc
+      document.getElementById("myDiv").innerHTML = "This text reappears!";
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
