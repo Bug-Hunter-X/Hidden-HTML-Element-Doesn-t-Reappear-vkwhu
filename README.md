@@ -1,0 +1,1 @@
+This repository demonstrates a subtle HTML bug where an element, after having its content emptied and its `display` style set to `none`, fails to reappear.  The solution involves correctly managing the element's visibility.
